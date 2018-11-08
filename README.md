@@ -89,7 +89,7 @@ Output:
 ## Documentation
 
 |Name  |Type  |Required|Default|
-|------|------|--------|
+|------|------|--------|-------|
 |`href`|String|Yes|-|
 |`title`|String|No|-|
 |`target`|String|No|`_self`|
