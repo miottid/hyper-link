@@ -1,39 +1,30 @@
 # hyper-link 🔗
 
-> `<nuxt-link>` on steroids.
-
-## Why?
-
-TODO
+`<hyper-link>` is a small Vue.js plugin dedicated to create hyperlinks. It aims to improve `<router-link>` by providing a versatile small component.
 
 ## Features
 
-Handles every link type:
+🔎 Detects link type and accordingly replace `<hyper-link>` with `<router-link>` or `<a>` tags.
+
+🔌 Handles every link type:
 
 - Relative (`/path/to/page`),
-- Absolute (`https//my-website.com`),
-- Anchors (`/path#page-section`),
-- Special (`mailto:email@address.com`, `tel:+00123456789`...).
+- Absolute (`https//example.com`),
+- Anchor (`/path#section`),
+- JavaScript (`javascript:...`),
+- Mailto / Tel (`mailto:email@address.com`, `tel:+00123456789`...).
 
-Automatically add required attributes among:
-
-- `href`,
-- `title`,
-- `target`,
-- `rel`,
-- `aria-label`.
+⚙️ Automatically adds required attributes, depending on link type.
 
 ## Installation
 
-### Download the package
+Download the package:
 
 ```shell
 npm install hyper-link
 ```
 
-### Globally register component
-
-Create `~/plugins/hyper-link.js`:
+Create a dedicated plugin in your app (`~/plugins/hyper-link.js`):
 
 ```js
 import Vue from 'vue'
@@ -47,31 +38,73 @@ Import the plugin in `nuxt.config.js` by adding `hyper-link` to the plugins list
 ```js
 module.exports = {
   ...,
-  plugins: ['hyper-link'],
+  plugins: [...otherPlugins, 'hyper-link'],
   ...
 }
 ```
 
 ## Usage
 
-Wrap the link content within the tag and add needed attributes:
+As the component has been globally registered, you don't need to import it on every `.vue` file. Just wrap the link content within the tag with needed attributes.
+
+### Basic link
+
+Here is an example with a simple link. If not explicitly provided, the link content is the title attribute.
+
+Input:
 
 ```html
-<hyper-link href="https://muxumuxu.com" title="Muxu.Muxu">
-  Visit Muxu.Muxu website
+<hyper-link href="/about" title="About us" />
+```
+
+Output:
+```html
+<router-link to="/about" title="About us">
+  About us
+</router-link>
+```
+
+### HTML rich link
+
+Input:
+
+```html
+<hyper-link href="https://example.com" title="Visit example website">
+  <img src="/path/to/example-icon.svg">
+  <h3>Example</h3>
 </hyper-link>
 ```
 
-> As the component has been globally registered, you don't need to call it on every `.vue` file.
+Output:
+
+```html
+<a href="https://example.com" title="Visit example website">
+  <img src="/path/to/example-icon.svg">
+  <h3>Example</h3>
+</a>
+```
+
+> 👆 This time, the output is a `<a>` tag because the `href` attribute points to an absolute URL.
 
 ## Documentation
 
-TODO: attributes list
-
-|Name  |Type  |Required|
+|Name  |Type  |Required|Default|
 |------|------|--------|
-|`href`|String|Required|
+|`href`|String|Yes|-|
+|`title`|String|No|-|
+|`target`|String|No|`_self`|
+|`rel`|String|No|-|
 
 ## Contribute
 
 TODO
+
+## License
+
+[MIT](/license.md)
+
+## About Muxu.Muxu
+
+[![Muxu.Muxu logo](https://i.imgur.com/fuFN8Rp.png)](https://muxumuxu.com)
+
+We help startups and established companies to invent, build, and launch their next product or venture.
