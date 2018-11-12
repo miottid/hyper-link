@@ -84,7 +84,7 @@ Output:
 </a>
 ```
 
-> 👆 This time, the output is a `<a>` tag because the `href` attribute points to an absolute URL.
+> ☝️ This time, the output is a `<a>` tag because the `href` attribute points to an absolute URL.
 
 ## Documentation
 
@@ -97,7 +97,27 @@ Output:
 
 ## Contribute
 
-TODO
+Make a pull-request.
+
+### Run the project locally using [Docker](https://docker.com)
+
+```
+docker-compose up
+```
+
+### Run the project locally without Docker.
+
+```
+npm install
+npm run serve
+```
+
+## Deploy to npm
+
+```
+npm run build-bundle
+npm publish --access public
+```
 
 ## License
 
