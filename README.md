@@ -24,6 +24,24 @@ Download the package:
 npm install @muxumuxu/hyper-link
 ```
 
+### On a VueJS project
+
+```js
+<template>
+  <hyper-link href="https://muxumuxu.com" title="Muxu.Muxu" target="_blank" rel="noopener" />
+</template>
+
+<script>
+import HyperLink from '@muxumuxu/hyper-link'
+
+export default {
+  components: { HyperLink }
+}
+</script>
+```
+
+### With NuxtJS
+
 Create a dedicated plugin in your app (`~/plugins/hyper-link.js`):
 
 ```js
