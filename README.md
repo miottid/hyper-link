@@ -21,14 +21,14 @@
 Download the package:
 
 ```shell
-npm install hyper-link
+npm install @muxumuxu/hyper-link
 ```
 
 Create a dedicated plugin in your app (`~/plugins/hyper-link.js`):
 
 ```js
 import Vue from 'vue'
-import HyperLink from 'hyper-link'
+import HyperLink from '@muxumuxu/hyper-link'
 
 Vue.component('hyper-link', HyperLink)
 ```
@@ -113,6 +113,10 @@ npm run serve
 ```
 
 ## Deploy to npm
+
+First you need to increment the package `version` in `package.json`.
+
+Next build and publish your work on the npm registry :
 
 ```
 npm run build-bundle
