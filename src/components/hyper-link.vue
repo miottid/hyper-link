@@ -27,17 +27,12 @@ export default {
       type: String,
       required: false,
       validator: function (value) {
-        return this.targetValues.indexOf(value) !== -1
+        return ['_blank', '_self', '_parent', '_top'].indexOf(value) !== -1
       }
     },
     rel: {
       type: String,
       required: false
-    }
-  },
-  data() {
-    return {
-      targetValues: ['_blank', '_self', '_parent', '_top']
     }
   },
   computed: {
