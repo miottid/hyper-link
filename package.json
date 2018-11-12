@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name hyper-link ./src/index.js",
+    "build-bundle": "vue-cli-service build --target lib --name hyper-link ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "files": [

@@ -9,9 +9,11 @@ services:
       - '8080:8080'
     volumes:
       - '.:/app'
+      - 'app_dist:/app/dist'
       - 'app_node_modules:/app/node_modules'
       - 'app_logs:/var/log'
 
 volumes:
   app_node_modules: {}
   app_logs: {}
+  app_dist: {}

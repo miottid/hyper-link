@@ -1,3 +1,3 @@
-import HyperLink from './HyperLink.vue'
+import HyperLink from './hyper-link.vue'
 
 export default HyperLink
