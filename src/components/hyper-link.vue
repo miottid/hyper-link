@@ -43,7 +43,7 @@ export default {
       return this.href.includes('#')
     },
     isJavaScript() {
-      return this.data.url.startsWith('javascript')
+      return this.href.startsWith('javascript:')
     },
     isMailtoOrTel() {
       return this.href.startsWith('mailto:') || this.href.startsWith('tel:')
