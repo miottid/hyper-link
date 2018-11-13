@@ -1,6 +1,6 @@
 {
   "name": "@muxumuxu/hyper-link",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "./dist/hyper-link.umd.js",
   "unpkg": "dist/hyper-link.umd.min.js",
   "scripts": {
@@ -52,5 +52,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "license": "MIT"
 }
