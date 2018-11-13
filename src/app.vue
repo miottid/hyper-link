@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <hyper-link href="https://muxumuxu.com" title="Muxu.Muxu" target="_blank" rel="noopener" />
+    <nav>
+      <ul>
+        <li><hyper-link href="/foo" title="Foo" /></li>
+        <li><hyper-link href="/bar" title="Bar" /></li>
+        <li><hyper-link href="https://muxumuxu.com" title="Muxu.Muxu" target="_blank" rel="noopener" /></li>
+      </ul>
+    </nav>
+    <router-view />
   </div>
 </template>
 
