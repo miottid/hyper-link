@@ -1,6 +1,6 @@
 {
   "name": "@muxumuxu/hyper-link",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "./dist/hyper-link.umd.js",
   "unpkg": "dist/hyper-link.umd.min.js",
   "scripts": {
@@ -48,6 +48,9 @@
       "autoprefixer": {}
     }
   },
+  "keywords": [
+    "nuxt", "link", "hypertext", "vue", "muxumuxu", "js", "helper", "tool"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
