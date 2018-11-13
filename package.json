@@ -1,6 +1,6 @@
 {
   "name": "@muxumuxu/hyper-link",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "main": "./dist/hyper-link.umd.js",
   "unpkg": "dist/hyper-link.umd.min.js",
   "scripts": {
@@ -38,6 +38,10 @@
     "parserOptions": {
       "parser": "babel-eslint"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muxumuxu/hyper-link.git"
   },
   "postcss": {
     "plugins": {
