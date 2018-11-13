@@ -65,7 +65,7 @@ module.exports = {
 
 As the component has been globally registered, you don't need to import it on every `.vue` file. Just wrap the link content within the tag with needed attributes.
 
-[![View hyper-link exemple](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8x7yop89w9).
+[![View hyper-link exemple](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8x7yop89w9)
 
 ### Basic link
 
