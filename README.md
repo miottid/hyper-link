@@ -124,6 +124,7 @@ Make a pull-request.
 ### Run the project locally using [Docker](https://docker.com)
 
 ```
+docker-compose run app npm install
 docker-compose up
 ```
 
