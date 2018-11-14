@@ -1,6 +1,6 @@
 {
   "name": "@muxumuxu/hyper-link",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "./dist/hyper-link.umd.js",
   "unpkg": "dist/hyper-link.umd.min.js",
   "scripts": {
