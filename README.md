@@ -56,7 +56,9 @@ Import the plugin in `nuxt.config.js` by adding `hyper-link` to the plugins list
 ```js
 module.exports = {
   ...,
-  plugins: [...otherPlugins, 'hyper-link'],
+  plugins: [...otherPlugins,
+    { src: '~/plugins/hyper-link', ssr: false }
+  ],
   ...
 }
 ```
