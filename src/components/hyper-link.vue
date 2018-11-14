@@ -1,5 +1,10 @@
 <template>
-  <a v-if="isExternal" :href="href" :target="target || '_blank'" :rel="rel || 'noopener'">
+  <a
+    v-if="isExternal"
+    :href="href"
+    :target="target || '_blank'"
+    :rel="rel || 'noopener'"
+  >
     <slot>{{ title }}</slot>
   </a>
 
@@ -21,18 +26,21 @@ export default {
     },
     title: {
       type: String,
-      required: false
+      required: false,
+      default: () => null
     },
     target: {
       type: String,
       required: false,
-      validator: function (value) {
+      validator: function(value) {
         return ['_blank', '_self', '_parent', '_top'].indexOf(value) !== -1
-      }
+      },
+      default: () => null
     },
     rel: {
       type: String,
-      required: false
+      required: false,
+      default: () => null
     }
   },
   computed: {
