@@ -45,10 +45,10 @@ export default {
 Create a dedicated plugin in your app (`~/plugins/hyper-link.js`):
 
 ```js
-import Vue from 'vue'
-import HyperLink from '@muxumuxu/hyper-link'
+import Vue from "vue";
+import HyperLink from "@muxumuxu/hyper-link";
 
-Vue.component('hyper-link', HyperLink)
+Vue.component("hyper-link", HyperLink);
 ```
 
 Import the plugin in `nuxt.config.js` by adding `hyper-link` to the plugins list:
@@ -57,7 +57,7 @@ Import the plugin in `nuxt.config.js` by adding `hyper-link` to the plugins list
 module.exports = {
   ...,
   plugins: [...otherPlugins,
-    { src: '~/plugins/hyper-link', ssr: false }
+    { src: '~/plugins/hyper-link', ssr: true }
   ],
   ...
 }
@@ -80,10 +80,9 @@ Input:
 ```
 
 Output:
+
 ```html
-<router-link to="/about" title="About us">
-  About us
-</router-link>
+<router-link to="/about" title="About us"> About us </router-link>
 ```
 
 ### HTML rich link
@@ -92,7 +91,7 @@ Input:
 
 ```html
 <hyper-link href="https://example.com" title="Visit example website">
-  <img src="/path/to/example-icon.svg">
+  <img src="/path/to/example-icon.svg" />
   <h3>Example</h3>
 </hyper-link>
 ```
@@ -101,7 +100,7 @@ Output:
 
 ```html
 <a href="https://example.com" title="Visit example website">
-  <img src="/path/to/example-icon.svg">
+  <img src="/path/to/example-icon.svg" />
   <h3>Example</h3>
 </a>
 ```
@@ -110,12 +109,12 @@ Output:
 
 ## Documentation
 
-|Name  |Type  |Required|Default|
-|------|------|--------|-------|
-|`href`|String|Yes|-|
-|`title`|String|No|-|
-|`target`|String|No|`_self`|
-|`rel`|String|No|-|
+| Name     | Type   | Required | Default |
+| -------- | ------ | -------- | ------- |
+| `href`   | String | Yes      | -       |
+| `title`  | String | No       | -       |
+| `target` | String | No       | `_self` |
+| `rel`    | String | No       | -       |
 
 ## Contribute
 
