@@ -134,6 +134,12 @@ npm install
 npm run serve
 ```
 
+### Run tests
+
+```sh
+npm run test
+```
+
 ## Deploy to npm
 
 First you need to increment the package `version` in `package.json`.
