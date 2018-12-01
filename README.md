@@ -1,6 +1,6 @@
 # hyper-link 🔗
 
-`<hyper-link>` is a small Vue.js plugin dedicated to create hyperlinks. It aims to improve `<router-link>` by providing a versatile small component.
+`<hyper-link>` is a tiny Vuejs component which aims to simplify the use of `<router-link>` by providing a universal hypertext link helper. Developers don't need to worry about choosing either `<a>` or `<router-link>` anymore.
 
 ## Features
 
@@ -26,7 +26,7 @@ npm install @muxumuxu/hyper-link
 
 ### On a VueJS project
 
-```js
+```html
 <template>
   <hyper-link href="https://muxumuxu.com" title="Muxu.Muxu" target="_blank" rel="noopener" />
 </template>
@@ -118,18 +118,24 @@ Output:
 
 ## Contribute
 
-Make a pull-request.
+### Download the project on your machine
 
-### Run the project locally using [Docker](https://docker.com)
-
+```sh
+git clone https://github.com/muxumuxu/hyper-link.git
 ```
+
+### Run the project locally
+
+**With [Docker](https://docker.com):**
+
+```sh
 docker-compose run app npm install
 docker-compose up
 ```
 
-### Run the project locally without Docker.
+**Without Docker:**
 
-```
+```sh
 npm install
 npm run serve
 ```
@@ -137,8 +143,12 @@ npm run serve
 ### Run tests
 
 ```sh
-npm run test
+docker-compose run app npm run test
 ```
+
+### Make a pull request
+
+Make a pull request [here](https://github.com/muxumuxu/hyper-link/pulls).
 
 ## Deploy to npm
 
