@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="content">
-      <h1><code>&lt;hyper-link&gt;</code></h1>
+      <img src="./images/logo.svg" alt="hyper-link logo">
       <ul>
         <li><hyper-link title="Default link" /></li>
         <li><hyper-link href="/foo" title="Relative link" /></li>
@@ -40,15 +40,9 @@ body {
   padding: 1rem;
 }
 
-h1 {
-  margin: 0 0 1rem;
-  text-align: center;
-}
-
-code {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 0.25rem;
-  padding: 0.25rem;
+img {
+  display: block;
+  margin: 0 auto 3rem;
 }
 
 ul {
