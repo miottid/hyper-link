@@ -2,9 +2,9 @@
 
 `<hyper-link>` is a small Vue.js plugin dedicated to create hyperlinks. It aims to improve `<router-link>` by providing a versatile small component.
 
-## Features
+<!-- ## Features
 
-🔎 Detects link type and accordingly replace `<hyper-link>` with `<router-link>` or `<a>` tags.
+🔎 Detects link type and accordingly replaces `<hyper-link>` with `<router-link>` or `<a>` tag.
 
 🔌 Handles every link type:
 
@@ -14,7 +14,13 @@
 - JavaScript (`javascript:...`),
 - Mailto / Tel (`mailto:email@address.com`, `tel:+00123456789`...).
 
-⚙️ Automatically adds required attributes, depending on link type.
+⚙️ Automatically adds required attributes, depending on link type. -->
+
+## Demo
+
+Click this button to have a project example using `hyper-link`:
+
+[![hyper-link example on Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8x7yop89w9)
 
 ## Installation
 
@@ -26,18 +32,12 @@ npm install @muxumuxu/hyper-link
 
 ### On a VueJS project
 
-```js
-<template>
-  <hyper-link href="https://muxumuxu.com" title="Muxu.Muxu" target="_blank" rel="noopener" />
-</template>
+Import the component inside the `main.js` file:
 
-<script>
+```js
 import HyperLink from '@muxumuxu/hyper-link'
 
-export default {
-  components: { HyperLink }
-}
-</script>
+Vue.component('hyper-link', HyperLink)
 ```
 
 ### With NuxtJS
@@ -55,99 +55,88 @@ Import the plugin in `nuxt.config.js` by adding `hyper-link` to the plugins list
 
 ```js
 module.exports = {
-  ...,
-  plugins: [...otherPlugins,
-    { src: '~/plugins/hyper-link', ssr: false }
-  ],
-  ...
+  plugins: [{ src: '~/plugins/hyper-link', ssr: false }]
 }
 ```
 
 ## Usage
 
-As the component has been globally registered, you don't need to import it on every `.vue` file. Just wrap the link content within the tag with needed attributes.
-
-[![View hyper-link exemple](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8x7yop89w9)
-
-### Basic link
-
-Here is an example with a simple link. If not explicitly provided, the link content is the title attribute.
-
-Input:
+As the component has been globally registered, you don't need to import it on every component file. Just use the tag as you would normally do:
 
 ```html
 <hyper-link href="/about" title="About us" />
+<hyper-link href="https://vuejs.org" title="Vue.js" />
 ```
 
-Output:
-```html
-<router-link to="/about" title="About us">
-  About us
-</router-link>
-```
-
-### HTML rich link
-
-Input:
+Renders to:
 
 ```html
-<hyper-link href="https://example.com" title="Visit example website">
-  <img src="/path/to/example-icon.svg">
-  <h3>Example</h3>
-</hyper-link>
+<router-link to="/about">About us</router-link>
+<a href="https://vuejs.org" target="_blank" rel="noopener">Vue.js</a>
 ```
 
-Output:
+> :eyes: As you can see, the output of the `<hyper-link>` tag is either  a `<a>` tag or a `<router-link>` tag, depending on the type of provided `href` value (absolute, relative...).
 
-```html
-<a href="https://example.com" title="Visit example website">
-  <img src="/path/to/example-icon.svg">
-  <h3>Example</h3>
-</a>
-```
+## Properties
 
-> ☝️ This time, the output is a `<a>` tag because the `href` attribute points to an absolute URL.
-
-## Documentation
-
-|Name  |Type  |Required|Default|
-|------|------|--------|-------|
+|Name|Type |Required|Default|
+|-|-|-|-|
 |`href`|String|Yes|-|
 |`title`|String|No|-|
 |`target`|String|No|`_self`|
 |`rel`|String|No|-|
 
+> :point_up: `title` and `rel` attributes are automatically set respectively to `_blank` and `noopener` in case of external links. This is overriding by setting the chosen value.
+
 ## Contribute
 
-Make a pull-request.
+You are welcome to contribute to `hyper-link` to find bugs or to submit new features. Please follow these steps:
 
-### Run the project locally using [Docker](https://docker.com)
+### Download the project
 
+```sh
+git clone https://github.com/muxumuxu/hyper-link.git
 ```
+
+<!-- ### Run the project locally using [Docker](https://docker.com)
+
+```sh
 docker-compose run app npm install
 docker-compose up
-```
+``` -->
 
-### Run the project locally without Docker.
+### Run the project locally
 
-```
+```sh
 npm install
 npm run serve
 ```
 
-### Run tests
+Visit [http://localhost:8080](http://localhost:8080).
+
+<!-- ### Run tests
 
 ```sh
 npm run test
-```
+``` -->
+
+### Make a pull request
+
+Submit your code with a properly detailed pull request. Provide enough information about what you did so the reviewing process will be easier.
 
 ## Deploy to npm
 
-First you need to increment the package `version` in `package.json`.
+### Increment version
 
-Next build and publish your work on the npm registry :
+Increment the version of the package in the `package.json` file:
 
+```js
+"version": "X.X.X"
 ```
+
+### Build and publish
+
+```sh
 npm run build-bundle
 npm publish --access public
 ```
