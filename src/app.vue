@@ -12,13 +12,8 @@
 </template>
 
 <script>
-import HyperLink from './components/hyper-link.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HyperLink
-  }
+  name: 'app'
 }
 </script>
 

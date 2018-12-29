@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './app.vue'
+import HyperLink from './components/hyper-link.vue'
 
-Vue.config.productionTip = false
-
+Vue.component('hyper-link', HyperLink)
 Vue.use(VueRouter)
 
 const Foo = { template: '<div>foo</div>' }
@@ -14,7 +14,7 @@ const routes = [
   { path: '/bar', component: Bar }
 ]
 
-const router = new VueRouter({routes});
+const router = new VueRouter({routes})
 
 new Vue({
   router,
