@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <nav>
+    <div class="content">
+      <img src="./images/logo.svg" alt="hyper-link logo">
       <ul>
-        <li><hyper-link href="/foo" title="Foo" /></li>
-        <li><hyper-link href="/bar" title="Bar" /></li>
-        <li><hyper-link href="https://muxumuxu.com" title="Muxu.Muxu" target="_blank" rel="noopener" /></li>
+        <li><hyper-link title="Default link" /></li>
+        <li><hyper-link href="/foo" title="Relative link" /></li>
+        <li><hyper-link href="https://github.com/muxumuxu/hyper-link" title="External link" /></li>
+        <li><hyper-link href="mailto:?subject=Hello%20World" title="Mailto link" /></li>
+        <li><hyper-link href="tel:+33000000000" title="Tel link" /></li>
       </ul>
-    </nav>
-    <router-view />
+    </div>
   </div>
 </template>
 
@@ -18,12 +20,27 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background: rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+}
+
+.content {
+  background: white;
+  border-radius: 0.25rem;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+img {
+  display: block;
+  margin: 0 auto 3rem;
+}
+
+ul {
+  margin: 0;
 }
 </style>

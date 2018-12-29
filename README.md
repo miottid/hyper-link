@@ -1,6 +1,6 @@
 # hyper-link 🔗
 
-`<hyper-link>` is a small Vue.js plugin dedicated to create hyperlinks. It aims to improve `<router-link>` by providing a versatile small component.
+`<hyper-link>` is a tiny Vuejs component which aims to simplify the use of `<router-link>` by providing a universal hypertext link helper. Developers don't need to worry about choosing either `<a>` or `<router-link>` anymore.
 
 <!-- ## Features
 
@@ -45,10 +45,10 @@ Vue.component('hyper-link', HyperLink)
 Create a dedicated plugin in your app (`~/plugins/hyper-link.js`):
 
 ```js
-import Vue from 'vue'
-import HyperLink from '@muxumuxu/hyper-link'
+import Vue from "vue";
+import HyperLink from "@muxumuxu/hyper-link";
 
-Vue.component('hyper-link', HyperLink)
+Vue.component("hyper-link", HyperLink);
 ```
 
 Import the plugin in `nuxt.config.js` by adding `hyper-link` to the plugins list:
@@ -123,6 +123,10 @@ npm run test
 ### Make a pull request
 
 Submit your code with a properly detailed pull request. Provide enough information about what you did so the reviewing process will be easier.
+
+### Make a pull request
+
+Make a pull request [here](https://github.com/muxumuxu/hyper-link/pulls).
 
 ## Deploy to npm
 
