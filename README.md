@@ -64,8 +64,8 @@ module.exports = {
 As the component has been globally registered, you don't need to import it on every component file. Just use the tag as you would normally do:
 
 ```html
-<hyper-link href="/about" title="About us" />
-<hyper-link href="https://vuejs.org" title="Vue.js" />
+<hyper-link href="/about">About us</hyper-link>
+<hyper-link href="https://vuejs.org">Vue.js</hyper-link>
 ```
 
 Renders to:
@@ -82,11 +82,10 @@ Renders to:
 |Name|Type |Required|Default|
 |-|-|-|-|
 |`href`|String|Yes|-|
-|`title`|String|No|-|
 |`target`|String|No|`_self`|
 |`rel`|String|No|-|
 
-> :point_up: `title` and `rel` attributes are automatically set respectively to `_blank` and `noopener` in case of external links. This is overriding by setting the chosen value.
+> :point_up: `target` and `rel` attributes are automatically set respectively to `_blank` and `noopener` in case of external links. It can be overriden by setting the chosen value.
 
 ## Contribute
 

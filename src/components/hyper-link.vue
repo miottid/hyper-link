@@ -5,15 +5,15 @@
     :target="target || '_blank'"
     :rel="rel || 'noopener'"
   >
-    <slot>{{ title }}</slot>
+    <slot />
   </a>
 
   <a v-else-if="containsHash || isJavaScript || isMailtoOrTel" :href="href">
-    <slot>{{ title }}</slot>
+    <slot />
   </a>
 
   <router-link v-else :to="href">
-    <slot>{{ title }}</slot>
+    <slot />
   </router-link>
 </template>
 
@@ -24,11 +24,6 @@ export default {
       type: String,
       required: false,
       default: '#'
-    },
-    title: {
-      type: String,
-      required: false,
-      default: () => null
     },
     target: {
       type: String,

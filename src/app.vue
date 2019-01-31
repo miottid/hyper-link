@@ -3,11 +3,11 @@
     <div class="content">
       <img src="./images/logo.svg" alt="hyper-link logo">
       <ul>
-        <li><hyper-link title="Default link" /></li>
-        <li><hyper-link href="/foo" title="Relative link" /></li>
-        <li><hyper-link href="https://github.com/muxumuxu/hyper-link" title="External link" /></li>
-        <li><hyper-link href="mailto:?subject=Hello%20World" title="Mailto link" /></li>
-        <li><hyper-link href="tel:+33000000000" title="Tel link" /></li>
+        <li><hyper-link>Default link</hyper-link></li>
+        <li><hyper-link href="/foo">Relative link</hyper-link></li>
+        <li><hyper-link href="https://github.com/muxumuxu/hyper-link">External link</hyper-link></li>
+        <li><hyper-link href="mailto:?subject=Hello%20World">Mailto link</hyper-link></li>
+        <li><hyper-link href="tel:+33000000000">Tel link</hyper-link></li>
       </ul>
     </div>
   </div>
