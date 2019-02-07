@@ -22,7 +22,7 @@ export default {
   props: {
     href: {
       type: String,
-      required: false,
+      required: true,
       default: '#'
     },
     target: {

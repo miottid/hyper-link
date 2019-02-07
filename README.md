@@ -1,4 +1,4 @@
-# hyper-link 🔗
+# ![hyper-link](src/images/logo.svg)
 
 `<hyper-link>` is a tiny Vuejs component which aims to simplify the use of `<router-link>` by providing a universal hypertext link helper. Developers don't need to worry about choosing either `<a>` or `<router-link>` anymore.
 
@@ -20,7 +20,7 @@
 
 Click this button to have a project example using `hyper-link`:
 
-[![hyper-link example on Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8x7yop89w9)
+[![hyper-link example on Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/kml72y4v5o)
 
 ## Installation
 
