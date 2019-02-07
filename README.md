@@ -2,20 +2,6 @@
 
 `<hyper-link>` is a tiny Vuejs component which aims to simplify the use of `<router-link>` by providing a universal hypertext link helper. Developers don't need to worry about choosing either `<a>` or `<router-link>` anymore.
 
-<!-- ## Features
-
-🔎 Detects link type and accordingly replaces `<hyper-link>` with `<router-link>` or `<a>` tag.
-
-🔌 Handles every link type:
-
-- Relative (`/path/to/page`),
-- Absolute (`https//example.com`),
-- Anchor (`/path#section`),
-- JavaScript (`javascript:...`),
-- Mailto / Tel (`mailto:email@address.com`, `tel:+00123456789`...).
-
-⚙️ Automatically adds required attributes, depending on link type. -->
-
 ## Demo
 
 Click this button to have a project example using `hyper-link`:
