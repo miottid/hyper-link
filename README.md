@@ -121,28 +121,13 @@ npm run test
 
 ### Make a pull request
 
-Submit your code with a properly detailed pull request. Provide enough information about what you did so the reviewing process will be easier.
-
-### Make a pull request
-
-Make a pull request [here](https://github.com/muxumuxu/hyper-link/pulls).
+You can submit a pull-request [here](https://github.com/muxumuxu/hyper-link/pulls). Provide enough information so the reviewing process will be easier.
 
 ## Deploy to npm
 
-### Increment version
-
-Increment the version of the package in the `package.json` file:
-
-```js
-"version": "X.X.X"
-```
-
-### Build and publish
-
-```sh
-npm run build-bundle
-npm publish --access public
-```
+1. Increment the version of the package in the `package.json` file.
+2. Build the bundle: `npm run build-bundle`.
+3. Publish the package: `npm publish --access public`.
 
 ## License
 
